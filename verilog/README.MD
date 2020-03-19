@@ -365,23 +365,23 @@ endgenerate
 
 ### 仿真结果与资源占用对比
 
-![VCS 仿真结果](D:\users\无名\PycharmProjects\data_source\pic\a6.png)
+![VCS 仿真结果](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a6.png)
 
 
 
-![FIR滤波效果，Python](D:\users\无名\PycharmProjects\data_source\pic\a9.png)
+![FIR滤波效果，Python](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a9.png)
 
-![FIR滤波效果，Verilog](D:\users\无名\PycharmProjects\data_source\pic\a10.png)
+![FIR滤波效果，Verilog](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a10.png)
 
 
 
-![FIR_IMPLE的资源占用 Quartus II 13.1](D:\users\无名\PycharmProjects\data_source\pic\a1.png)
+![FIR_IMPLE的资源占用 Quartus II 13.1](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a1.png)
 
-![FIR IP核资源占用，参数相同情况下，Quartus II 13.1](D:\users\无名\PycharmProjects\data_source\pic\a3.png)
+![FIR IP核资源占用，参数相同情况下，Quartus II 13.1](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a3.png)
 
-![FIR_IMPLE的Fmax Quartus II 13.1](D:\users\无名\PycharmProjects\data_source\pic\a2.png)
+![FIR_IMPLE的Fmax Quartus II 13.1](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a2.png)
 
-![FIR IP核，Fmax， Quartus II 13.1](D:\users\无名\PycharmProjects\data_source\pic\a4.png)
+![FIR IP核，Fmax， Quartus II 13.1](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/a4.png)
 
 
 
@@ -396,4 +396,4 @@ endgenerate
 
 欢迎大家关注Bug记录专栏，用微信扫描下方二维码关注微信公众号"BugRec"，那里有学习FPGA需要的资源
 
-![](D:\users\无名\PycharmProjects\data_source\pic\logo.png)
+![](https://github.com/maxs-well/FIR_Implementation/tree/master/pic/logo.png)
