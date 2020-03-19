@@ -2,9 +2,6 @@
 
 最近有朋友问我，他们被要求在单片机里实现一个滤波器，参数等要求此处略去不表，他很忧愁怎么在单片机实现滤波器进行滤波操作。
 
-<<<<<<< HEAD
-![这个朋友真不是我自己](D:\users\无名\PycharmProjects\data_source\pic\bj8yj.gif)
-=======
 ![这个朋友真不是我自己](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/bj8yj.gif)
 >>>>>>> fir_origin/master
 
@@ -21,19 +18,19 @@
 打开Matlab，在命令窗口输入fdatool(新版MATLAB为filterDesigner)回车，Matlab的FIR相关基础操作可以看[（学习Verilog）6. FIR IP核的基础功能使用总结](https://zhuanlan.zhihu.com/p/97236015)
 
 <<<<<<< HEAD
-![选择FIR窗函数，72阶，汉宁窗，fs:fc = 10:1](D:\users\无名\PycharmProjects\data_source\pic\1.png)
+![选择FIR窗函数，72阶，汉宁窗，fs:fc = 10:1](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/1.png)
 
 然后跟着下图的操作顺序来
 
-![按照操作来，接下来需要等待一段时间](D:\users\无名\PycharmProjects\data_source\pic\2.png)
+![按照操作来，接下来需要等待一段时间](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/2.png)
 
 等待一会后会打开Simulink，Simulink会出现下图
 
-![Filter的实现框图，点击它](D:\users\无名\PycharmProjects\data_source\pic\3.png)
+![Filter的实现框图，点击它](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/3.png)
 
 点击Filter，会出现下图
 
-![FIR滤波器实现框图](D:\users\无名\PycharmProjects\data_source\pic\4.png)
+![FIR滤波器实现框图](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/4.png)
 =======
 ![选择FIR窗函数，72阶，汉宁窗，fs:fc = 10:1](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/1.png)
 
@@ -48,7 +45,6 @@
 点击Filter，会出现下图
 
 ![FIR滤波器实现框图](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/4.png)
->>>>>>> fir_origin/master
 
 各位电脑实际操作的时候可以缩小看，整个滤波器结构其实就是这样子的。外部数据从上进入，然后经过延时到达下一级，我们称每一级为抽头；同一时刻下，抽头的数据会跟抽头系数相乘（图中三角形），然后所有抽头相乘的结构相加就是最后的结果。
 
@@ -68,11 +64,6 @@ FIR滤波器实现过程中，最麻烦的系数已经获取到了，接下来�
 
 #### 1. 直接导出数据到文本文件
 
-<<<<<<< HEAD
-![导出数据](D:\users\无名\PycharmProjects\data_source\pic\6.png)
-
-![保存为txt文件](D:\users\无名\PycharmProjects\data_source\pic\7.png)
-=======
 ![导出数据](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/6.png)
 
 ![保存为txt文件](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/7.png)
@@ -82,9 +73,6 @@ FIR滤波器实现过程中，最麻烦的系数已经获取到了，接下来�
 
 #### 2. 导出C语言的头文件，直接用在C/C++上
 
-<<<<<<< HEAD
-![生成C 头文件](D:\users\无名\PycharmProjects\data_source\pic\8.png)
-=======
 ![生成C 头文件](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/8.png)
 >>>>>>> fir_origin/master
 
@@ -182,10 +170,6 @@ def fir_inst_array(data, coef):
 FIR数据与抽头系数相乘直接使用了Numpy的点乘，两个数组点乘可以直接得到加权求和的结果。
 
 
-
-<<<<<<< HEAD
-![结果对比](D:\users\无名\PycharmProjects\data_source\pic\9.png)
-=======
 ![结果对比](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/9.png)
 >>>>>>> fir_origin/master
 
@@ -203,4 +187,4 @@ FIR数据与抽头系数相乘直接使用了Numpy的点乘，两个数组点乘
 
 欢迎关注BUG记录公众号（微信号：BugRec），回复106获取本文的Python项目文件夹
 
-![微信号：BugRec](D:\users\无名\PycharmProjects\data_source\pic\logo.png)
+![微信号：BugRec](https://github.com/maxs-well/FIR_Implementation/blob/master/pic/logo.png)
