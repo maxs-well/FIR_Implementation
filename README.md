@@ -2,11 +2,13 @@
 
 最近有朋友问我，他们被要求在单片机里实现一个滤波器，参数等要求此处略去不表，他很忧愁怎么在单片机实现滤波器进行滤波操作。
 
-![这个朋友真不是我自己](D:\software_file\word\bj8yj.gif)
+![这个朋友真不是我自己](D:\users\无名\PycharmProjects\data_source\pic\bj8yj.gif)
 
 我告诉他，只需要Matlab就可，或者说只要你能确定滤波器抽头的系数就可以了。为什么滤波器只需要抽头系数就可以了，这一切都要从滤波器的结构讲起；为了方便讲解，我们选用结构简单的FIR滤波器讲解。
 
 本文通过讲解FIR的系统结构，进而讲解数字滤波器滤波原理和实现方法。文章涉及部分数字信号处理内容，实现方法设计Python语言和Matlab的使用以及部分线性代数的基础知识。
+
+本文所使用的Python项目文件夹开源在Github，链接在文章底部；也可以关注BUG记录公众号（微信号：BugRec）回复106获取项目工程。
 
 ------
 
@@ -14,19 +16,19 @@
 
 打开Matlab，在命令窗口输入fdatool(新版MATLAB为filterDesigner)回车，Matlab的FIR相关基础操作可以看[（学习Verilog）6. FIR IP核的基础功能使用总结](https://zhuanlan.zhihu.com/p/97236015)
 
-![选择FIR窗函数，72阶，汉宁窗，fs:fc = 10:1](C:\Users\wood\Desktop\pic\1.png)
+![选择FIR窗函数，72阶，汉宁窗，fs:fc = 10:1](D:\users\无名\PycharmProjects\data_source\pic\1.png)
 
 然后跟着下图的操作顺序来
 
-![按照操作来，接下来需要等待一段时间](C:\Users\wood\Desktop\pic\2.png)
+![按照操作来，接下来需要等待一段时间](D:\users\无名\PycharmProjects\data_source\pic\2.png)
 
 等待一会后会打开Simulink，Simulink会出现下图
 
-![Filter的实现框图，点击它](C:\Users\wood\Desktop\pic\3.png)
+![Filter的实现框图，点击它](D:\users\无名\PycharmProjects\data_source\pic\3.png)
 
 点击Filter，会出现下图
 
-![FIR滤波器实现框图](C:\Users\wood\Desktop\pic\4.png)
+![FIR滤波器实现框图](D:\users\无名\PycharmProjects\data_source\pic\4.png)
 
 各位电脑实际操作的时候可以缩小看，整个滤波器结构其实就是这样子的。外部数据从上进入，然后经过延时到达下一级，我们称每一级为抽头；同一时刻下，抽头的数据会跟抽头系数相乘（图中三角形），然后所有抽头相乘的结构相加就是最后的结果。
 
@@ -46,15 +48,15 @@ FIR滤波器实现过程中，最麻烦的系数已经获取到了，接下来�
 
 #### 1. 直接导出数据到文本文件
 
-![导出数据](C:\Users\wood\Desktop\pic\6.png)
+![导出数据](D:\users\无名\PycharmProjects\data_source\pic\6.png)
 
-![保存为txt文件](C:\Users\wood\Desktop\pic\7.png)
+![保存为txt文件](D:\users\无名\PycharmProjects\data_source\pic\7.png)
 
 
 
 #### 2. 导出C语言的头文件，直接用在C/C++上
 
-![生成C 头文件](C:\Users\wood\Desktop\pic\8.png)
+![生成C 头文件](D:\users\无名\PycharmProjects\data_source\pic\8.png)
 
 
 
@@ -151,9 +153,14 @@ FIR数据与抽头系数相乘直接使用了Numpy的点乘，两个数组点乘
 
 
 
-![结果对比](C:\Users\wood\Desktop\pic\9.png)
+![结果对比](D:\users\无名\PycharmProjects\data_source\pic\9.png)
 
 蓝色部分为信号源，橘红色的线就是滤波后的信号。结果表明，滤波器效果已经实现。不过，整个滤波器实现中，我们只是实现了滤波器结构，滤波器系数都是由软件确定。数字信号处理，研究的就是系统冲激响应序列h(n)的确定以及实现。
 
 
 
+欢迎关注知乎专栏[Bug记录](https://zhuanlan.zhihu.com/BugRec)
+
+欢迎关注BUG记录公众号（微信号：BugRec），回复106获取本文的Python项目文件夹
+
+![微信号：BugRec](D:\users\无名\PycharmProjects\data_source\pic\logo.png)
